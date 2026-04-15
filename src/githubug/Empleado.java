@@ -13,12 +13,14 @@ public class Empleado {
     String nombre;
     String apellido;
     String direccion;
+    double salario;
 
     public Empleado() {
         this.id = 0;
         this.nombre = "";
         this.apellido = "";
         this.direccion = "";
+        this.salario = 0;
         
         
                 
@@ -29,6 +31,7 @@ public class Empleado {
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
+        this.salario = salario;
     }
 
     public int getId() {
@@ -62,6 +65,21 @@ public class Empleado {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+ 
     
+    public void CalcularSalario(){
+        if (salario < 5000){
+        System.out.println("Gana bien :)");
+    }
+    }
     
 }
